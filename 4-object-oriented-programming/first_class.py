@@ -27,6 +27,8 @@ class Student:
         # exemplo: def __init__(new_object, new_name, new_grade):
 
         self.name = new_name # Criando uma variavel com o atributo name
+        '''É uma boa pratica de programação inicializar as variaveis no __init___'''
+
         self.grades = new_grades # O mesmo aconteceu com grades
         # depois dessa linha o objeto self ja não é mais vazio
 

@@ -86,6 +86,60 @@ class User:
 11. ValueError
     Também é um erro muito comum. 
     Normalmente, só built-in functions vão levantar ValueError
+   
+    É importante ressaltar que se quisermos dar 'raise' em ValueErrors é melhor nossos próprios erros.
 
-    
+12. ImportError
+    Um exemplo: onde fazemos imports de maneira circular, dando voltas em circulo, importar um arquivo
+    que importa o mesmo arquivo.
+
+    # arquivo app.py
+    import blog
+
+    def menu():
+        pass
+
+    # arquivo blog.py
+    from app import menu
+
+    def do_something():
+        pass
+
+        
+13. DeprecationWarning
+    É um warning, não um erro. Deprecated significa que esta não é a melhor maneira de fazer aquilo.
+    Apesar de ser um warning ele é tratado da mesma maneira que um erro no python.
+
+Exemplo:
+"""
+
+class User:
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+
+    def register(self):
+        print(self.password, self.username)
+        raise DeprecationWarning('User#Register still works, but is deprecated')
+
+    @classmethod
+    def register_user(cls, username, password):
+        print(self.password, self.username)
+        return cls(username, password)
+
+novo = User('Ricardo', '123')
+novo.register()
+
+# Se rodarmos o programa vai acontecer o seguinte warning:
+'''Traceback (most recent call last):
+  File "built_in_erros_in_python.py", line 131, in <module>
+    novo.register()
+  File "built_in_erros_in_python.py", line 123, in register
+    raise DeprecationWarning('User#Register still works, but is deprecated')
+DeprecationWarning: User#Register still works, but is deprecated'''
+
+
+# CONSIDERAÇÕES E OBSERVAÇÕES:
+# Possivelmente não vamos dar 'raise' em nenhuma dessas exceções.
+# Devemos criar nossas proprias exceções com nomes e descrições apropriadas para cada caso.
 
