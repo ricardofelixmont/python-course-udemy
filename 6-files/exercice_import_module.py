@@ -14,3 +14,8 @@ print(__name__) # name guarda o nome do módulo, que é sempre '__main__'
 
 # CHILDREN 
 # commom é uma child de util, funciona da mesma maneira que o css selctor
+# PARENTS
+# util é parent de commom, utilizando a notação de ..commom.module da na mesma que utils.commom.module.
+
+# OBS: QUANDO UTILIZAMOS CAMINHOS RELATIVOS PARA IMPORTAR UM ARQUIVO, ELE NÃO PODERÁ SER EXECUTADO COMO UM SCRIPT A PARTE, SOMENTE DENTRO DE OUTRO
+# MODULO.
