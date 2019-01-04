@@ -11,10 +11,18 @@ print(data['friends'][0])  # mostrando o primeiro item da lista de amigos.
 
 
 # SALVANDO UM JSON FILE
-cars = {
+# algo engraçado é que se usarmos {} ao inves de [] no codigo abaixo, da o seguinte erro: 
+
+'''
+Traceback (most recent call last):
+  File "./reading_json_files.py", line 18, in <module>
+    {'make':'Ford', 'model':'Focus'}
+TypeError: unhashable type: 'dict'
+'''
+cars = [ 
         {'make':'Ford', 'model':'Fiesta'},
         {'make':'Ford', 'model':'Focus'}
-        }
+        ]
 
 with open('json_cars.txt', 'w') as f:
     json.dump(cars, f)
@@ -41,9 +49,9 @@ arquivo.close()
 # Podemos também transformar uma string em um dicionario de duas maneiras:
 # 1. Utilizando a funçãi json.loads(), o 's' vem da palavra string.
 # supondo que temos uma string: 
-my_json_string = '[{"name":"Alfa Romeo", "released":1950}]'
+string = '[{"name":"Alfa Romeo", "released":1950}]'
 
-dicionario = json.loads(my_json_string)
+dicionario = json.loads(string)
 print(dicionario[0]['name'])
 
 
