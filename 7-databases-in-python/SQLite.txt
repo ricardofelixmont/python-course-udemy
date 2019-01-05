@@ -1,0 +1,28 @@
+SQLite é um banco relacional muito utilizado em mobile:
+
+Em comparações com outros SGDB como MySql e Oracle:
+- Não consegue escrever mais de um dado no banco por vez, 
+se tiver duas pessoas tentando gravar dados no banco ao mesmo tempo uma delas nao vai conseguir pois só permite um por vez.
+- Em compensação na leitura, ele suporta várias leituras simultaneas.
+- Pode rodar in memory ou como um arquivo unico onde os dados são armazenados.
+- O python ja vem com sqlite instalado, podemos usar o módulo: import sqlite3
+
+# Um arquivo é gerado para gravar todos os dados que quisermos, isso
+facilita a movimetação desses dados de um computador para o outro.
+
+
+create table books(campo1 tipo primary key, campo2 tipo, campo3 tipo)
+
+insert into books values('Nome', 'idade', 'outro campo')
+
+SELECT * FROM books
+
+UPDATE books SET read=1 WHERE name='nome'
+
+SELECT * FROM books ORDER BY id  # ordem crescente
+
+SELECT * FROM books ORDER BY id DESC      # ordem decrescente
+
+SELECT * FROM books ORDER BY id DESC LIMIT 1  # pega o ultimo item da tabela books
+
+SELECT * FROM books ORDER BY id LIMIT 3   # Pega o 3° item da tabela books

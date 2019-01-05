@@ -28,3 +28,10 @@ def bloco():
     print(y) # não vai ser impresso
 print(bloco())
 
+
+
+# FUNÇÕES PRIVADAS
+def _nova_funcao:
+    print('Função Privada')
+
+# Só podemos ser utilizadas no modulo atual, mesmo que importem esse modulo, elas nao podem ser usadas.

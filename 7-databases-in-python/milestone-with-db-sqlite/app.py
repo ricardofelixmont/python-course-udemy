@@ -15,6 +15,7 @@ Your choice: """
 
 
 def menu():
+    database.CreateBookTable.create_book_table()
     user_input = ''
     while user_input != 'q':
         user_input = input(USER_CHOICE).lower()
@@ -26,11 +27,10 @@ def menu():
             print(database.Add.add(name, autor))
 
         elif user_input == 'l':
-            lista = database.ListAll.list_all()
+            x = database.ListAll.list_all()
             system('clear')
             print('Lista de Filmes'.center(21, '='))
-            for book in lista:
-                print(book, '\n', end='.'*20)
+            print(x)
             print('\n')
             print('Fim'.center(21, '='))
 
@@ -60,5 +60,8 @@ def menu():
 
 
 if __name__=='__main__':
+   # x = database.ListAll.list_all()
+    #print(x)
+
     menu()
 

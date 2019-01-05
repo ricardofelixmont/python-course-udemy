@@ -69,6 +69,8 @@ class DeleteBook:
                 del books[index] 
         return f'The book {name} was deleted successfully...'
 
+
+
 if __name__=='__main__':
     
     # Testing add method...
