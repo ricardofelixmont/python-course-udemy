@@ -60,8 +60,6 @@ def menu():
 
 
 if __name__=='__main__':
-   # x = database.ListAll.list_all()
-    #print(x)
 
     menu()
 
