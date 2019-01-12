@@ -10,14 +10,26 @@
 
 
 import logging
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)  # Muda o nivel de logg que queremos trabalhar.
 
+logging.basicConfig(
+        format='%(asctime)s %(levelname)s:%(message)s',
+        datefmt='%d-%m-%Y %H:%M:%S', # podemos usar isso para formatar a data como quisermos.
+        level=logging.DEBUG,
+        filename='logs.txt') # Cria um arquivo de log onde serão armazenados os mesmos.
+
+
+
+
+logging.basicConfig(format='%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s', level=logging.DEBUG) 
 # Depois de importar o modulo logging, a primeira coisa que precisamos fazer é criar uma variavel 'logger':
 logger = logging.getLogger('test_logger')
 
 # Para printar coisas podemos usar por exemplo:
 logger.info('This will not be shown.')
 logger.warning('This message will be shown.')
+logger.debug('This is a bug message')
+logger.critical('A critical error occurred.')
 
 
 """

@@ -1,0 +1,4 @@
+2019-01-12 14:56:37,328 INFO:This will not be shown.
+2019-01-12 14:56:37,328 WARNING:This message will be shown.
+2019-01-12 14:56:37,328 DEBUG:This is a bug message
+2019-01-12 14:56:37,328 CRITICAL:A critical error occurred.
