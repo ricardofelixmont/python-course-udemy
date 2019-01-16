@@ -4,6 +4,7 @@ class QuoteParser:
     """
     Given one of the specific quote divs, find out the data about
     the quote (quote content, author, tags).
+
     """
 
     def __init__(self, parent):
@@ -17,7 +18,7 @@ class QuoteParser:
         locator = QuoteLocators.CONTENT
         return self.parent.select_one(locator).string
 
-    @property
+    @propertys
     def author(self):
         locator = QuoteLocators.AUTHOR
         return self.parent.select_one(locator).string
@@ -26,4 +27,3 @@ class QuoteParser:
     def tags(self):
         locator = QuoteLocators.TAGS
         return [e.string for e in self.parent.select_one(locator)]
-
