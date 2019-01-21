@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.7
-""" Decorators são funções de alta ordem que retoram uma função."""
+""" Decorators são funções de alta ordem que recebem uma first class function e retoram uma outra função modificada."""
 # Como ja vimos, funções de ordem superior são funções que recebe outras funções(first class functions) como argumento.
 # O que torna o decorator uma função de ordem superior diferente, é que ele precisa retornar uma função também.
 
