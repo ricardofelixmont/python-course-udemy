@@ -25,19 +25,20 @@ for c in range(2,10):
 
 # PRIME NUMBERS:
 for n in range(2, 10):            # [2, 3, 4, 5, 6, 7, 8, 9]
-    for x in range(2, number):    # O que esta dentro da lista é o x,  n= 2 [],n =3 [2], n = 4 [2,3], n = 5 [2,3,4], n = 6 [2,3,4,5], ...
+    for x in range(2, n):    # O que esta dentro da lista é o x,  n= 2 [],n =3 [2], n = 4 [2,3], n = 5 [2,3,4], n = 6 [2,3,4,5], ...
         if n % x == 0:
             print(f'{n} equals {x} * {n//x}')  # (x*n)//x = n
     else:
         print(f'{n} é um número primo')
 
 
-
+'''
 # PRIME NUMBERS BY MYSELF:
 
 for n in range(2, 10):     # [2,3,4,5,6,7,8,9]
     for x in range(2, n):  # [], [2], [2,3], [2,3,4],...
         print(f'{n} é igual a {n}*{n//2}')  
         break
-else:
-    print(f'{n} é um número primo')
+    else:
+        print(f'{n} é um número primo')
+        '''
